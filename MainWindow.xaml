@@ -12,7 +12,11 @@
         <CollectionViewSource x:Key="inventoryViewSource" d:DesignSource="{d:DesignInstance {x:Type AutoLotModel:Inventory}, CreateList=True}"/>
     </Window.Resources>
     <Grid>
-        <TabControl x:Name="tbCtrlAutoLot" HorizontalAlignment="Left" Height="325" Margin="112,54,0,0" VerticalAlignment="Top" Width="586">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="74*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="tbCtrlAutoLot" HorizontalAlignment="Left" Height="325" Margin="112,54,0,0" VerticalAlignment="Top" Width="586" Grid.ColumnSpan="2">
             <TabItem Header="Customers">
                 <Grid Background="#FFE5E5E5" DataContext="{StaticResource customerViewSource}">
                     <Grid.ColumnDefinitions>
